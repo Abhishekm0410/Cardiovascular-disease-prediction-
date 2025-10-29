@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        {% if result %}
+            <p><strong>Prediction:</strong> {{ result['prediction'] }}</p>
+            <p><strong>Probability:</strong> {{ result['probability'] }}</p>
+        {% elif error %}
+            <p class="error">Error: {{ error }}</p>
+        {% else %}
+            <p>No result available.</p>
+        {% endif %}
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
